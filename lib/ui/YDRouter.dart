@@ -12,6 +12,7 @@ class YDRouter{
 
   static const String BOOK_SOURCE_LIST = "source_list";
   static const String BOOK_SOURCE_ADD = "source_add";
+  static const String BOOK_SOURCE_INPUT = "source_input";
 
   static const String BOOK_ADD = "book_add";
 

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:yuedu_hd/db/book_source_helper.dart';
+import 'package:yuedu_hd/ui/YDRouter.dart';
 import 'package:yuedu_hd/ui/widget/space.dart';
 import 'dart:developer' as developer;
 
@@ -95,6 +96,14 @@ class _PageSourceAddState extends State<PageSourceAdd> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
+        FlatButton(onPressed: (){
+          Navigator.of(context).pushNamed(YDRouter.BOOK_SOURCE_INPUT);
+        },
+          child: Text('新建',style: TextStyle(color: theme.accentColor),),
+          color: theme.primaryColorDark,
+          shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
+        ),
+        HSpace(8),
         FlatButton(onPressed: (){
           _fromNetWork();
         },
